@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon",
-    "start:prod": "npm run build && node ./dist/src/index.js",
+    "stage": "tsc && git add . && git status",
     "build": "npx tsc"
   },
   "keywords": [],
@@ -12,10 +12,12 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "bcrypt": "^5.1.1",
     "express": "^4.21.1",
     "mongoose": "^8.7.2"
   },
   "devDependencies": {
+    "@types/bcrypt": "^5.0.2",
     "@types/express": "^5.0.0",
     "@types/node": "^22.7.9",
     "nodemon": "^3.1.7",

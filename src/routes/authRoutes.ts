@@ -1,11 +1,9 @@
 import { Request, Response, Router } from 'express';
-import User from '../models/users';
+import { createAccount } from '../controllers/authControllers';
 
 const authRouter = Router();
 
-authRouter.post('/register', async (req: Request, res: Response) => {
-  res.json({ message: 'Sign up route' });
-});
+authRouter.post('/register', createAccount);
 
 authRouter.post('/login', (req: Request, res: Response) => {
   res.json({ message: 'Sign in route' });

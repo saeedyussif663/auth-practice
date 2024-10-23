@@ -18,6 +18,6 @@ app.listen(3000, () => {
     .connect(
       'mongodb+srv://saeedyussif663:bpLGcuwggJp1DghH@my-projects.ivoyo.mongodb.net/auth-practice'
     )
-    .catch((err) => console.log('An error occured connection to db'));
+    .catch((err) => console.log('An error occured connecting to db'));
   console.log('Application started on port 3000!');
 });
